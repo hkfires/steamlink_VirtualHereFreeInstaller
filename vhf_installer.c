@@ -44,7 +44,7 @@ void *installThread(void *vargp) {
     installStep = INSTALL_DOWNLOAD;
     ret = 0;
     ret += system("mkdir -p /mnt/config/overlay/usr/local/bin/");
-    ret += system("wget https://virtualhere.com/sites/default/files/usbserver/vhusbdarm -O /mnt/config/overlay/usr/local/bin/vhusbdarm");
+    ret += system("curl -k https://www.virtualhere.com/sites/default/files/usbserver/vhusbdarm -o /mnt/config/overlay/usr/local/bin/vhusbdarm");
     ret += system("chmod 755 /mnt/config/overlay/usr/local/bin/vhusbdarm");
     if (ret > 0) {
         installError = INSTALL_DOWNLOAD;
