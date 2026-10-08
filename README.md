@@ -15,6 +15,11 @@ Fortunately, there are ARM binaries of the VirtualHere server available which ar
 The VirtualHereFree Installer downloads the free version of the VirtualHere server to your Steam Link and manages the starting and
 stopping of the server automatically, enabling you to use the free VirtualHere client binaries on your host machine.
 
+## Recent Updates
+
+* **Moonlight Support & Process Management Optimization**: The background watchdog script (`vhfwatchdog`) now monitors both Steam Link's default `streaming_client` and `moonlight`. The VirtualHere server will automatically start if either streaming client is active and stop when neither is running.
+* **Fix VirtualHere Binary Download**: Fixed an issue where the installer failed to download the ARM server binary by switching the download command to `curl -k` and updating the download URL.
+
 ## Installation
 
 ### On the Steam Link (server)
@@ -34,7 +39,7 @@ To update to a newer Virtualhere server version just run the installer again.
 ### On your Desktop PC (client)
 
  * Download and install the latest VirtualHere free client for your OS: https://virtualhere.com/usb_client_software
- * Run the VirtualHere client. It should autodiscover the server when yoou are streaming.
+ * Run the VirtualHere client. It should autodiscover the server when you are streaming.
 
 ## Additional configuration
 
